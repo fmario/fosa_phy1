@@ -1,0 +1,91 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Arbeit und Energie}
+\section{Arbeit}
+Eine Kraft verrichtet Arbeit an einem K\"orper, wenn sie sich mit diesem verschiebt.\\
+\newline
+Bei konstanter Kraft:
+\[
+	\boxed{W=F_{||}\cdot s=F\cdot\cos\theta\cdot s}
+\]
+\[
+	[W]=N\cdot m=\frac{kg\cdot m^2}{s^2}=J=Joule
+\]
+\\
+\\
+Bei ver\"anderlicher Kraft:
+\[
+	\boxed{W=\sum_{i}{F_{||}(x_i)\cdot\mathrm{d}x_i}=\int_a^bF_x(x)\cdot\mathrm{d}x}
+\]
+\\
+\\
+Federarbeit:
+\[
+	\boxed{W=\int_a^bF_x\cdot\mathrm{d}x=k\int_a^bx\cdot\mathrm{d}x}
+\]
+\section{Energie}
+Energie kann weder vergehen noch entstehen. Energie kann nur umgewandelt oder zwischen K\"orpern ausgetauscht werden.\\
+\newline
+\boxed{
+\begin{tabular}{l|l}
+		\rowcolor{white}Beschleunigungsarbeit	& kinetische Energie\\
+		\rowcolor{white}$W_{beschl}=ma\cdot\Delta x$	& $\Delta E_{kin}=\frac{1}{2}mv_B^2-frac{1}{2}mv_A^2$\\
+		\rowcolor{lgray}Reibungsarbeit				& innere, thermische Energie\\
+		\rowcolor{lgray}$W_{gleiten}=\mu_{GleitR}F_N\cdot\Delta x$	& $\Delta Q$\\
+		\rowcolor{white}Hubarbeit	& potentielle Energie der H\"ohe\\
+		\rowcolor{white}$W_{hub}=mg\cdot\Delta h$	& $\Delta E_{pot}=mg\cdot\Delta h$\\
+		\rowcolor{lgray}Dehnarbeit an der Feder				& potentielle Energie der Spannung\\
+		\rowcolor{lgray}$W_{dehnen}=\int_0^sF_{zug}\cdot\mathrm{d}x=\frac{1}{2}ks^2$	& $\Delta E_{elast}=\frac{1}{2}ks^2$\\
+		\rowcolor{white}	& Rotationsenergie\\
+		\rowcolor{white}	& $E_{rot}=\frac{1}{2}I\omega^2$\\
+		
+\end{tabular}
+}
+\section{Leistung}
+Definition Leistung:
+\[
+	\boxed{
+		P=\frac{\mathrm{d}W}{\mathrm{d}t}=\frac{F\cdot\mathrm{d}s}{\mathrm{d}t}=F\cdot v
+	}
+\]\\
+Durchschnittliche Leistung:
+\[
+	\boxed{
+		\left\langle P\right\rangle = \frac{\int_{t_1}^{t_2}P\mathrm{d}t}{t_2-t_1}=\frac{\Delta W}{\Delta t}
+	}
+\]\\
+\[
+	[P]=W=\frac{J}{s}=\frac{kg\cdot m^2}{s^3}
+\]\\
+1PS = 735.5W
+\subsection{Bewegung mit konstanter Leistung}
+\[
+	\boxed{
+		v=\sqrt{\frac{2\cdot P\cdot t}{m}}
+	}
+\]\\
+\[
+	\boxed{
+		\Delta t=(v_2^2-v_1^2)\frac{m}{P}
+	}
+\]\\
+\[
+	\boxed{
+		s=\int v\cdot\mathrm{d}t=\sqrt{\frac{2\cdot P}{m}}\int\sqrt{t}\cdot\mathrm{d}t=\frac{2}{3}\sqrt{\frac{2\cdot P\cdot t^3}{m}}\Bigg|_{t_A}^{t_B}
+	}
+\]\\

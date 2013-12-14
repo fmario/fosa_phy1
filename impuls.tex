@@ -1,0 +1,90 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Impuls und Kraftstoss}
+\section{Impuls $\vec{p}$}
+Definition:
+\[
+	\boxed{
+		\vec{p}=m\cdot\vec{v}
+	}
+\]\\
+Das zweite Newtonsche Gesetz verallgemeinert:
+\[
+	\boxed{
+		\sum{\vec{F}}=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}
+	}
+\]
+
+\section{Kraftstoss $\vec{J}$}
+Definition des Kraftstosses (Impuls\"anderung):
+\[
+	\boxed{
+		\vec{J}=\int_{t_1}^{t_2}{(\sum{\vec{F}})\mathrm{d}t}=\vec{p}_2-\vec{p}_1
+	}
+\]\\
+Durchschnittliche Kraft:
+\[
+	\boxed{
+		\vec{F}_{average}=\frac{1}{\Delta t}\int_{t_1}^{t_2}{\vec{F}(t)\mathrm{d}t}=\frac{\vec{J}}{\Delta t}
+	}
+\]
+
+\section{Impulserhaltung}
+Definition Gesamtimpuls:
+\[
+	\boxed{
+		\vec{P}=\vec{p}_A+\vec{p}_B+\vec{p}_C+\ldots
+	}
+\]
+Ist die Vektrosumme aller \"ausseren Kr\"afte auf ein System Null, bleibt der Gesamtimpuls erhalten:
+\[
+	\boxed{
+		\sum{\vec{F}_{extern}}=0\leftrightarrow\vec{P}=konst.
+	}
+\]
+\subsection{elastischer Stoss}
+\textit{Definition:}\\
+Beim elastischen Stoss bleibt die kinetische Energie vor und nach dem Stoss vollst\"andig erhalten.\\
+\newline
+Mit dem Energie- und Impulserhalt:
+\[\begin{split}
+	\frac{1}{2}m_Av_{A1}^2+\frac{1}{2}m_Bv_{B1}^2=\frac{1}{2}m_Av_{A2}^2+\frac{1}{2}m_Bv_{B2}^2\\
+	m_A\vec{v}_{A1}+m_B\vec{v}_{B1}=m_A\vec{v}_{A2}+m_B\vec{v}_{B2}
+\end{split}\]\\
+ergibt sich:
+\[
+	\boxed{\begin{split}
+		v_{A2}=\frac{m_A\cdot v_{A1}+m_B(2\cdot v_{B1}-v_{A1})}{m_A+m_B}\\
+		v_{B2}=\frac{m_B\cdot v_{B1}+m_A(2\cdot v_{A1}-v_{B1})}{m_A+m_B}
+	\end{split}}
+\]
+
+\subsection{inelastischer Stoss}
+\textit{Definition:}\\
+Beim inelastischen Stoss wird ein Teil der kinetischen Energie in Verformungsarbeit gesteckt.\\
+\newline
+Gemeinsame Geschwindigkeit nach dem Stoss:
+\[
+	\vec{v}_{A2}=\vec{v}_{B2}=\vec{v}_{2}
+\]
+\[
+	\boxed{
+		m_A\vec{v}_{A1}+m_B\vec{v}_{B1}=(m_A+m_B)\cdot\vec{v}_2
+	}
+\]\\
+$\vec{v}_2$ ist die Geschwindigkeit des Schwerpunktes der beiden K\"orper.

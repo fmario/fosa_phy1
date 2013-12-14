@@ -1,0 +1,62 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Schwerpunkt}
+\[\boxed{\begin{split}
+	x_{cm}=\frac{m_1x_1+m_2x_2+m_3x_3+\ldots}{m_1+m_2+m_3+\ldots}\\
+	y_{cm}=\frac{m_1y_1+m_2y_2+m_3y_3+\ldots}{m_1+m_2+m_3+\ldots}
+\end{split}}\]\\
+oder durch integrieren:
+\[
+	\boxed{\begin{split}
+		x_{cm}=\frac{1}{M}\int_0^M{x\cdot\mathrm{d}m}\\
+		y_{cm}=\frac{1}{M}\int_0^M{y\cdot\mathrm{d}m}\\
+	\end{split}}
+\]
+
+\section{Bewegung des Schwerpunktes}
+\[
+	\boxed{
+		v_{cm,x}=\frac{m_1v_{1x}+m_2v_{2x}+m_3v_{3x}+\ldots}{m_1+m_2+m_3+\ldots}=\frac{\mathrm{d}x_{cm}}{\mathrm{d}t}
+	}
+\]\\
+Gesamtimpuls des Systems:
+\[
+	\boxed{
+		M\cdot\vec{v}_{cm}=m_1\vec{v}_1+m_2\vec{v}_2+m_3\vec{v}_3+\ldots=\vec{P}
+	}
+\]\\
+Ableitung nach Zeit:
+\[
+	\boxed{
+		M\cdot\vec{a}_{cm}=m_1\vec{a}_1+m_2\vec{a}_2+m_3\vec{a}_3+\ldots=\frac{\mathrm{d}\vec{P}}{\mathrm{d}t}=\vec{F}_{res}=\sum\vec{F}_{ext}
+	}
+\]\\
+
+\section{Raketenantrieb}
+\[\boxed{\begin{split}
+	m\cdot a=v_{rel}\frac{\mathrm{d}m}{\mathrm{d}t}+\sum{F_{ext}}\\
+	\\
+	v_{rel}\frac{\mathrm{d}m}{\mathrm{d}t} \Rightarrow \mathrm{Schubkraft}
+\end{split}}\]\\
+Im Fall $F_{ext}=-mg$ und einem konstanten Massentrom $R=\frac{\mathrm{d}m}{\mathrm{d}t}$:
+\[
+	\boxed{
+		a(t)=\frac{v_{rel}}{m}\frac{\mathrm{d}m}{\mathrm{d}t}-g=\frac{v_{rel}\cdot R}{m_0-R\cdot t}-g
+	}
+\]\\
+$v_{rel}:$ realtive ausstossgeschw. des Gases (gegen\"uber der Rakete)

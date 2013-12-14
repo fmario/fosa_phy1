@@ -1,0 +1,171 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Kraft}
+
+Die 4 fundamentalen K\"aften sind:\\
+\fbox{\parbox{\linewidth}{
+	\begin{itemize}
+		\item \textbf{Gravitationskraft} (Anziehung zwischen Massen)\newline
+			(Bsp: Anziehung zwischen Sonne und Erde, Gezeitenkr\"afte)
+		\item \textbf{Elektromagnetische Kraft} (Kr\"afte zwischen Ladungen)\newline
+			(Bsp: Reibung, Seilkraft, Lorentzkraft)
+		\item \textbf{Schwache Kraft und starke Kraft} (Kernkr\"afte)\newline
+			(Bsp: Radioaktiver Zerfall, Anziehung zwischen Protonen und Neutronen)
+	\end{itemize}
+}}
+\newline
+\fbox{\parbox{\linewidth}{
+	\begin{itemize}
+		\item \textbf{Kr\"afte sind Vektoren:}\newline
+			$\vec{F}_{Res}=\vec{F}_1+\vec{F}_2+\vec{F}_3+\ldots$\newline
+			$\vec{F}=(F_x,F_y,F_z)=(F_r,F_\varphi,F_z)$
+		\item \textbf{Tr\"agheitsgesetz} (1. Axiom)\newline
+			$\vec{F}_{Res}=0\leftrightarrow\vec{a}=0\leftrightarrow\vec{v}=\mathrm{konstant}$
+		\item \textbf{Bewegungsgleichung} (2. Axiom)\newline
+			$\vec{F}_{Res}=m\cdot\vec{a}\leftrightarrow F_x=m\cdot a_x,F_y=m\cdot a_y,F_z=m\cdot a_z$
+		\item \textbf{Wechselwirkungsgesetz} (3. Axiom)\newline
+			$\vec{F}_{K\"orper\;A\;auf\;K\"orper\;B}=-\vec{F}_{K\"orper\;B\;auf\;K\"orper\;A}$
+	\end{itemize}
+}}
+
+\section{\"Ubersicht}
+
+\begin{footnotesize}
+\boxed{
+\begin{tabular*}{\linewidth}{p{0.17\linewidth}lp{0.35\linewidth}}
+		\textbf{Kraft}				&	\textbf{Gleichung}				& \textbf{Ursprung und Bemerkung}\\\hline
+		\rowcolor{white}Feder									& $F_{Feder}=k\cdot x$   $(\vec{F}_H=-k\cdot\vec{x})$	& (em); lineare N\"aherung - Hooke'sches Gesetz\\
+		\rowcolor{lgray}Normalkraft						& $F_N=F_g\cdot\cos\theta$	& (em); $F_N$ ist immer senkrecht zur Kontaktfl\"ache\\
+		\rowcolor{white}Hangkraft							& $F_H=m\cdot g\cdot\sin\theta$ & (em); $F_H$ ist immer parallel zu Kontaktfl\"ache\\
+		\rowcolor{lgray}Haftreibung						& $F_{HR}<F_{HR,max}=\mu_{HR}\cdot F_N$ & (em); Parallel zur Kontaktfl\"ache und der angreifenden Kraft engegengesetzt\\
+		\rowcolor{white}Gleitreibung					& $F_{GR}=\mu_{GR}\cdot F_N$& (em); Der Bewegung entgegengesetzt; Van der Waals Kr\"afte\\
+		\rowcolor{lgray}Lorentzkraft					& $F_L=qvB\cdot\sin\theta$	& (em); $\vec{F}_L=q(\vec{v}\times\vec{B})$\\
+		\rowcolor{white}Hydrostatische Kraft	& $F_{hydr}=\rho gh\cdot A=\int\rho gh\mathrm{d}A$	& Gravitation (und em); $p_{hydr}=\rho gh$ ist der hydrostatische Druck\\
+		\rowcolor{lgray}Auftrieb							& $F_A=\rho_{Fluid}gV_{K\"orper}$ & Gravitation (und em)
+\end{tabular*}
+}
+\end{footnotesize}
+\newline
+
+\section{Federkraft}
+
+\textbf{Hooke'sches Gesetz:} \\
+$\boxed{F_{Feder}=k\cdot \Delta x }$   $\left[k\right]=\frac{N}{m}$ \\
+\\
+\textbf{Federn in Serie:}
+\[
+	F_{Res}=k_{Res}\cdot\Delta x
+\]
+wobei:
+\[
+	\boxed{k_{Res}=\frac{k_1\cdot k_2}{k_1+k_2}}
+\]
+oder allgemein:
+\[
+	\boxed{k_{Res}=\frac{1}{\frac{1}{k_1}+\frac{1}{k_2}+\frac{1}{k_3}+\ldots}}
+\]
+\\
+\textbf{Federn parallel:}
+\[
+	\boxed{F_{Res}=k_{Res}\cdot\Delta x=F_{H,1}+F_{H,2}+\ldots=(k_1+k_2+\ldots)\cdot\Delta x}
+\]
+
+\section{Reibung}
+\subsection{Kontaktkr\"afte: Normal- \& Reibungskraft}
+
+\fbox{\parbox{\linewidth}{Die \textbf{Normalkraft} steht immer \textbf{senkrecht} auf der Kontaktfl\"ache.}}
+\\\\
+\fbox{\parbox{\linewidth}{Die \textbf{Reibungskraft} zeigt immer \textbf{parallel} zu Kontaktfl\"ache.}}
+\newline
+\newline
+\textbf{Haftreibungskraft:}\\
+\[
+	\boxed{F_{Zug}=F_{HR}\leq\mu_{HR}\cdot F_N}
+\]
+\newline
+Die Haftreibung muss \"uberwunden werden, damit sich der K\"orper in Bewegung setzt.\\
+Solange die angreifende Kraft $F_{Zug}$ nicht gr\"osser als $F_{HR,max}=\mu_{HR}\cdot F_N$ ist, ist die Haftreibungskraft gleich der Zugkraft.\\ 
+\\
+\textbf{Gleitreibung:}\\
+\[
+	\boxed{F_{GR}=\mu_{GR}\cdot F_N}
+\]
+\newline
+Die Gleitreibung zwischen festen K\"orpern h\"angt nicht von deren relativer Geschwindigkeit $v$ ab.\\
+\\
+$\mu_{GR}<\mu_{HR}$!\\
+\begin{figure}[htbp]
+	\centering
+	\begin{gnuplot}[scale=0.75]
+		set terminal epslatex color
+		set size ratio -1
+		set grid
+		set xrange [0:70]
+		set yrange [0:35]
+		set xtics 10
+		set ytics 5
+		set ylabel '$F$ [N] / $a$ [$\mathrm{\frac{m}{s^2}}$]'
+		set style line 1 linecolor rgb 'red' linetype 1 linewidth 2
+		set style line 2 linecolor rgb 'green' linetype 1 linewidth 2
+		set style line 3 linecolor rgb 'blue' linetype 1 linewidth 2
+		set style line 4 linecolor rgb 'orange' linetype 1 linewidth 2
+		
+		# define the function
+		f_z(x)=x/2
+		f_hr(x)=(f_z(x)<25)?f_z(x):0
+		f_gr(x)=(f_z(x)<25)?0:10
+		a(x)=(f_z(x)<25)?0:((f_z(x)-f_gr(x))/1.33)
+		
+		plot f_z(x) ti "$F_{Zug}$" with lines linestyle 1, f_hr(x) ti "$F_{HR}$" with lines linestyle 2, f_gr(x) ti "$F_{GR}$" with lines linestyle 3, a(x) ti "$a$" with lines linestyle 4
+	\end{gnuplot}
+\end{figure}
+\subsection{Luftwiderstand}
+Im Gegensatz zur Reibung zwischen festen K\"orpern ist der Luftwiderstand von der Fahrgeschwindigkeit $v$ abh\"angig.\\
+\\
+\begin{footnotesize}
+	\begin{tabular}{|l|l}		
+			\cline{0-0}
+			$F_{LW,l}=b\cdot v$		& langsam, kleines v\\
+			$F_{LW,s}=c\cdot v^2$	&	schnell, grosses v\\
+			\cline{0-0}
+	\end{tabular}
+\end{footnotesize}
+
+\section{Kurvenkr\"afte}
+\subsection{Zentripetalkraft}
+\[
+	\boxed{F_{rad}=F_{Zentripetal}=m\cdot a_{rad}=m\frac{v^2}{R}=m\omega^2R=m\frac{4\pi^2R}{T^2}}
+\]
+\subsection{Neigungswinkel}
+Bei h\"angenden Massenen:
+\[
+	\boxed{\tan\beta=\frac{\omega^2R}{g}=\frac{R}{H}}
+\]
+mit $H=\frac{g}{\omega^2}$; die H\"ohe unter der Aufh\"angung ist einzig eine Funktion der Kreisfrequenz $\omega$ und $g$, nicht der Seill\"ange L!
+\newline
+\newline
+Steilwandkurven:
+\[
+	\boxed{\tan\beta=\frac{F_{ZP}}{F_g}=\frac{v^2}{R\cdot g}}
+\]
+\newline
+\newline
+In die Kurve liegen (Winkel $\beta$ gegen\"uber horizontalen sonst wie bei Steilwandkurve):
+\[
+	\boxed{\tan\beta=\frac{F_g}{F_{ZP}}=\frac{R\cdot g}{v^2}}
+\]
