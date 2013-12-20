@@ -1,0 +1,147 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{W\"arme}
+
+\section{Konstanten}
+\[
+\boxed{\begin{aligned}	
+		&Avogadrozahl \\
+		&N_{A} = 6.00221 \cdot 10^{23} Teilchen\\
+		\\
+		&Universelle Gaskonstante\\
+		&R = 8.314472 \frac{J}{mol \cdot K}\\
+		\\
+		&Boltzmann\\
+		&k_{B} \frac{R}{N_{A}}=1.381 \cdot 10^{23} \frac{J}{K}
+	\end{aligned}}	\]
+
+\subsection{Ideale Gasgleichung}
+
+\[pV = nRT = \frac{N_{tot}}{N_{A}}RT = \frac{m_{tot}}{M}RT\]
+
+\begin{tabular*}{\linewidth}{p{0.15\linewidth}lp{0.37\linewidth}}
+	\textbf{Variable}				&	\textbf{Bedeutung}		& \textbf{Einheit}\\
+	\hline
+	\rowcolor{white}p			&      $Gasdruck$				&$Pa$\\
+	\rowcolor{lgray}T			&	$Gastemperatur$			& $K$\\
+	\rowcolor{white}$N_{tot}$		&	$Anzahl Moleküle im Gas$	&$ $\\				
+	\rowcolor{lgray}$m_{tot}$		&	$Gasmasse$			&$ $\\
+	\rowcolor{white}n			&	$Anzahl mol im Gas$		&$ $\\
+	\rowcolor{lgray}$N_{A}$		&	$Avogadrozahl$			&$N_{A} = 6.02 \cdot 10^23 \frac{Teilchen}{mol}$\\	
+	\rowcolor{white}M			&	$Molmasse$			&$ $\\
+\end{tabular*}
+
+
+\section{Luftdruck vs. H\"ohe bei konstanter Temperatur}
+Der Schweredruck in einm Fluid ist $\Delta p=-\rho \cdot g\Delta y$.\\
+
+\[
+\boxed{\begin{aligned}	
+		p(y)&=p_0 \cdot \e^{- \frac{m_{mol}g}{RT}y} = p_0 \e^{-\frac{y}{H}}
+		\\
+		H&= \frac{RT}{m_{mol}g}
+	\end{aligned}}\]
+\newline
+
+
+\subsection{Energie}
+
+Kinetische Energie im idealen Gas. \newline
+	\[ E_{Gas} =\frac{3}{2}nRT\]
+\newline
+
+Mittlere kinetische Energie eines Moleküls im idealen Gas.\newline
+	\[ \langle E_{kin, k\"ul} \rangle = \frac{1}{2}m_{k\"ul} \langle v^2 \rangle = \frac{3}{2}k_{B}T\]
+\newline
+
+
+
+\subsection{Geschwindigkeiten}
+\[
+	v_{rms}=sqrt{\langle v^2 \rangle}=sqrt{\frac{3k_{B}T}{m_{k\"ul}}}=sqrt{\frac{3RT}{m_{mol}}}
+\]
+\\
+Wahrscheinlichste Geschwindigkeit:
+\[
+	v_{w}=sqrt{\frac{2k_{B}T}{m_{k\"ul}}}=sqrt{\frac{2RT}{m_{mol}}}
+\]
+\\
+Durchschnittsgeschwindigkeit:
+\[
+	v_{av}=sqrt{\frac{8k_{B}T}{\pi m_{k\"ul}}}=sqrt{\frac{8RT}{\pi m_{mol}}}
+\]
+\newline
+
+
+\subsection{Freiheitsgrade FG}
+Das einatomibe, ideale Gas hat genau drei Bewegungs-Freiheitgrade: links nach rechts, hinten nach vorn, unten nach oben. Zweiatomige Gase haben mehr Bewegungsm\"oglichkeiten.
+
+Äquipartitions Gesetz der klassischen Mechanik: 
+Auf jeden aktiven Freiheitsgrad eines Moleküls in einem Gas der Temperatur T entfällt im Mittel die Energie $\frac{1}{2}k_{B}T$.
+
+\[\boxed{\begin{aligned}
+		\frac{\langle E_{kül} \rangle}{FG}= \frac{1}{2}k_{B}T
+		\\
+		\frac{\langle E_{mol} \rangle}{FG}= \frac{1}{2}R \cdot T
+	\end{aligned}}\]	
+
+\subsection{Spezifische Wärmekapazität c}
+Um die Temperatur einer Substanz zu erhöhen, kann man ihr W\"arme Q zuf\"uhren. W\"arme ist eine Energieform [J]. Eine Kalorie entspricht 4.186J.
+
+\[\boxed{\begin{aligned}	
+		Q=m \cdot c \cdot \Delta T \rightarrow dQ0m \cdot c \cdot dT
+		\\
+		c pro Masse: c_{(m)}=\frac{1 \cdot dQ}{m \cdot  dT}
+		\\
+		c pro Mol: c_{(n)}=\frac{1 \cdot dQ}{n \cdot  dT}		
+		\\
+		c_{(m)}=\frac{c_{(n)}}{m_{mol}}
+	\end{aligned}}\]\newline
+	
+Spezifische Wärmekapazität des \textbf{idealen Gases} pro Mol, bei $\underline{\mathrm{konstantem}}$ Gasvolumen.
+
+		Einatomigen Gases:
+		\[\boxed{			
+			c_{(n)V}=c_{V}=\frac{3}{2}R
+		}\]\newline
+		Zweiatomigen Gases:
+		\[\boxed{	
+			c_{(n)V}=c_{V}=\frac{5}{2}R							
+		}\]\newline
+
+\subsection{Mittlere freie Weglänge $\Lambda$}
+Wir betrachten die Moleküle alas harte Kugeln mit Radius $r$ und leiten eine Kollisionszeit $t_{mean}$ und eine mittlere freie Weglänge $\Lambda$ her.
+
+Mittlere Kollisionszeit
+\[ t_{mean} = \frac{dt}{dN}= \frac{V}{4 \pi \sqrt{2}r^2vN} \]
+	
+Mittlere freie Wegl\"ange
+\[ \Lambda =v \cdot t= \frac{V}{4 \pi \sqrt{2}r^2 \cdot N}=  \frac{k_{B} \cdot T}{4 \pi \sqrt{2}r^2 \cdot p} \]
+
+\subsection{Wahrscheinlichkeit}
+Die Verteilfunktion der molekularen Geschwindigkeiten f(v) kann mittels statistischer Mechanik hergeleitet werden.
+
+Maxwell-Boltzmann Verteilung
+\[ f(v)=4\pi \left(\frac{m_{mol}}{2\pi \cdot RT}\right)^{\frac32} \cdot v^2 \cdot \e^{-\frac{m_{mol} \cdot v^2}{2RT}}\]
+
+\[ f(v)= 4\pi \left(\frac{m_{kul}}{2\pi \cdot k_{B}T}\right)^{\frac32} \cdot v^2 \cdot \e^{-\frac{m_{kul} \cdot v^2}{2k_{B}T}}\]
+
+Wahrscheinlichkeitsdichte:
+\[ W(v_{1},v_{2})= \int\limits_{v_{1}}^{v_{2}} f(v)\di v\]
+
+\[ W(v_{1},v_{2})= \int\limits_{v_{1}}^{v_{2}} 4\pi \left(\frac{m_{mol}}{2\pi \cdot RT}\right)^{\frac32} \cdot v^2 \cdot \e^{-\frac{m_{mol} \cdot v^2}{2RT}}\di v\]
