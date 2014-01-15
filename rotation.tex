@@ -21,7 +21,7 @@
 		\hline
 		\multicolumn{2}{|l|}{ROTATION} 			& \multicolumn{2}{l|}{LINEARE BEWEGUNG}\\
 		\hline
-		\rowcolor{lgray}Tr\"agheitsmoment & $[kg \cdot m^2]$										& Masse&\\
+		\rowcolor{lgray}Trägheitsmoment & $[kg \cdot m^2]$										& Masse&\\
 		\multicolumn{2}{|l|}{$I=\sum{r_i^2m_i=\int{r^2\mathrm{d}m}}$}  				& \multicolumn{2}{l|}{$m$}\\
 		\hline
 		\rowcolor{lgray}Drehmoment & $[N \cdot m]$															& Kraft & $[N]$\\
@@ -42,7 +42,7 @@
 \end{tabular}
 
 \section{Kreisbewegung}
-Bogenl\"ange $s$:
+Bogenlänge $s$:
 \[\boxed{s=r \cdot \theta} \]\\
 Geschwindigkeit tagnetial $v$:
 \[\boxed{v=r \cdot \omega=r\cdot\frac{\mathrm{d}\theta}{\mathrm{d}t}} \]\\
@@ -51,7 +51,7 @@ Beschleunigung tangential $a_{tan}$:
 Beschleunigung raidal $a_{rad}$:
 \[\boxed{a_{rad}=\frac{v^2}{r}=\omega^2\cdot r } \]\\
 
-\section{Tr\"agheitsmoment}
+\section{Trägheitsmoment}
 Definition bzgl. fester Achse:
 \[
 	\boxed{
@@ -60,7 +60,7 @@ Definition bzgl. fester Achse:
 \]
 $[I]=kg\cdot m^2$\\
 \newline
-Fehlende Massen haben negatives Tr\"agheitsmoment!\\
+Fehlende Massen haben negatives Trägheitsmoment!\\
 \newline
 \begin{footnotesize}
 	Scheibe mit Loch: $I_{tot}=I^*+I_{Loch}$\\
@@ -75,8 +75,151 @@ Fehlende Massen haben negatives Tr\"agheitsmoment!\\
 	}
 \]
 
-\subsection{Tr\"agheitsmoment regelm\"assiger K\"orper}
-TODO
+\newpage
+\subsection{Trägheitsmoment regelmässiger Körper}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{m{2cm} c m{0.4\textwidth}}
+Körper        & Achse        & $I$ \\
+\hline
+& & \\
+Kreisring, dünn &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-kreisring-duenn.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= m \cdot r^2$
+                \item[$I_y$]$= \frac12 m\cdot r^2$
+                \end{itemize} \\
+Volltorus (Vollring) &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-kreisring.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                        \item[$I_x$]$= m \left({r_1}^2 + \frac{3}{4}
+                                \cdot {r_2}^2\right)$
+                \end{itemize} \\
+Kreisbogen &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-kreisbogen.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= \frac12 m \cdot r^2 
+                        \left(1-\frac{sin(\alpha)}{\alpha} \right)$
+                \item[$I_y$]$= \frac12 m \cdot r^2
+                        \left(1+\frac{sin(\alpha)}{\alpha} \right)$
+                \item[$I_z$]$= m \cdot r^2$
+                \end{itemize} \\
+Kreissektor &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-kreissektor.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= \frac14 m \cdot r^2
+                        \left(1-\frac{sin(\alpha)}{\alpha} \right)$
+                \item[$I_y$]$= \frac14 m \cdot r^2
+                        \left(1+\frac{sin(\alpha)}{\alpha} \right)$
+                \item[$I_z$]$= \frac12 m \cdot r^2$        
+                \end{itemize} \\
+Kreisscheibe, dünn &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-kreisscheibe-duenn.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= \frac12 m \cdot r^2$
+                \item[$I_y$]$= \frac14 m \cdot r^2$
+                \end{itemize} \\
+Kugel, solid & \multirow{2}{*}{
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-kugel.pdf}
+        \end{minipage}}
+                &
+                \begin{itemize}
+                        \item[$I_x$]$= \frac{2}{5} m \cdot r^2$
+                \end{itemize} \\
+Kugel, dünnwandig & &
+                \begin{itemize}
+                        \item[$I_x$]$\approx \frac{2}{3} m \cdot r^2$
+                \end{itemize}
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[h!]
+\centering
+\begin{tabular}{m{2cm} c m{0.4\textwidth}}
+Körper        & Achse        & $I$ \\
+\hline
+& & \\
+Stab &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-stab.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_y$]$= \frac{1}{12} m \cdot l^2$
+                \item[$I_{y'}$]$= \frac{1}{3} m \cdot l^2$
+                \end{itemize} \\
+& & \\
+Vollzylinder &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-vollzylinder.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= \frac12 m \cdot r^2$
+                \item[$I_y$]$= \frac{1}{12} m \left( 3r^2 + l^2 \right)$
+                \end{itemize} \\
+& & \\
+Hohlzylinder, dünnwandig &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-hohlzylinder-duenn.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= m \cdot  r^2$
+                \item[$I_y$]$= \frac12 m (r^2 + \frac16 l^2)$
+                \end{itemize} \\
+& & \\
+Hohlzylinder &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-hohlzylinder.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= \frac12 m \left({r_1}^2 + {r_2}^2 \right)$
+                \item[$I_y$]$= \frac14 m \left({r_1}^2 + {r_2}^2
+                        + \frac13 l^2 \right)$
+                \end{itemize}\\
+Quader &
+        \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[scale=\traegscale]{traeg/traeg-quader.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_x$]$= \frac{1}{12} m \left(b^2 + c^2\right)$
+                \item[$I_y$]$= \frac{1}{12} m \left(a^2 + c^2\right)$
+                \item[$I_z$]$= \frac{1}{12} m \left(a^2 + b^2\right)$
+                \end{itemize} \\
+Platte, dünn &
+        \begin{minipage}{0.3\textwidth}
+        \includegraphics[scale=\traegscale]{traeg/traeg-platte.pdf}
+        \end{minipage} &
+                \begin{itemize}
+                \item[$I_z$]$= \frac{1}{12} m \cdot a^2$
+                \item[$I_{z'}$]$= \frac{1}{3} m \cdot a^2$
+                \end{itemize} \\
+\end{tabular}
+\end{table}
+
+\newpage
 
 \section{Perfektes Rollen}
 \[
@@ -103,7 +246,7 @@ $[M]=Nm$\\
 \newline
 Das Drehmoment ist \textbf{senkrecht} zu $\vec{F}$ und $\vec{r}$.\\
 \newline
-Rotation eines starren K\"orpers um feste Achse:
+Rotation eines starren Körpers um feste Achse:
 \[
 	\boxed{
 		\sum{\vec{M}_i}=\vec{M}_{res} = I\vec{\alpha}
@@ -141,35 +284,35 @@ Definition:
 \]\\
 $[L]=\frac{kg\cdot m^2}{s}$\\
 \newline
-Drehimpuls f\"ur Symmetrieachse von starrem K\"orper:
+Drehimpuls für Symmetrieachse von starrem Körper:
 \[
 	\boxed{
 		\vec{L}=I\cdot\vec{\omega}
 	}
 \]\\
 \newline
-Drallsatz (Newton f\"ur die Rotation):
+Drallsatz (Newton für die Rotation):
 \[
 	\boxed{
 		\sum{\vec{M}}=\frac{\mathrm{d}\vec{L}}{\mathrm{d}t}
 	}
 \]
 \newpage
-\section{Pr\"azession}
+\section{Präzession}
 Die Schwerkraft bewirkt das Drehmoment:
 \[
 	M=r\times mg
 \]
-Mit $r$ als Abstand des Schwerpunkts zum Unterst\"utzungspunkt.\\
+Mit $r$ als Abstand des Schwerpunkts zum Unterstützungspunkt.\\
 \newline
-Da $M$ senkrecht zu $r$ und $F_g$ ist, ist es auch senkrecht zum Drehimpuls $L$. Daher \"andert sich nur dessen Richtung, nicht jedoch der Betrag. Somit dreht sich der Kreisel horizontal. Es ist:
+Da $M$ senkrecht zu $r$ und $F_g$ ist, ist es auch senkrecht zum Drehimpuls $L$. Daher ändert sich nur dessen Richtung, nicht jedoch der Betrag. Somit dreht sich der Kreisel horizontal. Es ist:
 \[
 	\begin{split}
 		&\frac{\mathrm{d}L}{L}=\mathrm{d}\varphi\\
 		\Rightarrow\ \ &M=\frac{\mathrm{d}L}{\mathrm{d}t}=L\frac{\mathrm{d}\varphi}{\mathrm{d}t}
 	\end{split}
 \]\\
-Die Winkelgeschwindigkeit $\omega_P$ diser Rotation betr\"agt ($w_P\ll w_K$):
+Die Winkelgeschwindigkeit $\omega_P$ diser Rotation beträgt ($w_P\ll w_K$):
 \[
 	\boxed{
 		\omega_P=\frac{\mathrm{d}\varphi}{\mathrm{d}t}=\frac{M}{L}=\frac{mgr}{I\omega_K}
@@ -181,6 +324,6 @@ Die Winkelgeschwindigkeit $\omega_P$ diser Rotation betr\"agt ($w_P\ll w_K$):
 
 \begin{figure}[h!]
 \center
-\piccaption{P\"azession\label{prazession}}
+\piccaption{Päzession\label{prazession}}
 \parpic{\includegraphics[scale=0.8]{prazession}}
 \end{figure}
