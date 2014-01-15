@@ -1,0 +1,407 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Schwingungen}
+
+\section{Einfache harmonische Schwingung}
+Die rücktreibende Kraft ist proportional zur Auslenkung. In diesem Fall ist die Schwingung harmonisch, d.h. eine Sinus- bzw. Kosinus-Schwingung.
+
+\[
+	-kx = F_x = ma = m \ddot{x} \rightarrow \ddot{x} + \frac{k}{m}x = 0
+\]
+\\
+Die Lösung aus dieser homogenen Differenzialgleichung:
+\[\boxed{
+	x(t) = A \cos(\omega t \pm \phi)
+}\]
+
+\[\boxed{
+	\omega = 2 \pi f = \sqrt{\frac{k}{m}}
+}\]
+
+\[\boxed{
+	T = 2 \pi \sqrt{\frac{m}{k}}
+}\]
+\\
+\begin{footnotesize}
+	Die Amplitude $A$ und der Phasenwinkel $\phi$ sind durch die Anfangsbedingungen gegeben.\\
+	Eine positive Phase $\phi$ bedeutet eine Verschiebung nach links, ein negatives $\phi$ eine nach rechts!
+\end{footnotesize}
+\\
+\\
+Phase und Amplitude aus Anfangsbedingungen:
+\[\boxed{
+	\phi = \arctan \left( - \frac{v_0}{\omega x_0} \right)\qquad 
+	A = \sqrt{{x_0}^2+\frac{{v_0}^2}{\omega^2}}
+}\]
+
+
+
+\subsection{$x(t)$, $v(t)$ und $a(t)$ der EHS}
+Einfache harmonische Schwingung:
+\[
+\boxed{\begin{aligned}
+	x(t) &= A \cos \left( \omega t \pm \phi \right) \\
+	\dot{x}(t) &= v(t) = -\omega A \sin \left( \omega t \pm \phi \right) \\
+	\ddot{x}(t) &= a(t) = -\omega^2 A \cos \left( \omega t \pm \phi \right)
+\end{aligned}}\]
+\\
+\begin{footnotesize}
+	$\omega$ = Kreisfrequenz ($2 \pi f$) \\
+	$A$ = Amplitude \\
+	$\phi$ = Phasenwinkel
+\end{footnotesize}
+\\
+\\\\
+$v$ aus Amplitude und Position:
+\[
+	v(t) = \sqrt{\frac{k}{m}} \cdot \sqrt{A^2-x^2(t)}
+\]
+\[
+	v_{max} = \omega A = A\sqrt{\frac{k}{m}}
+\]
+\\
+$a$ aus Amplitude und Position:
+\[
+	a(t) = -\frac{k}{m} \cdot x(t)
+\]
+\[
+	a_{max} = -\omega^2\cdot A
+\]
+\subsection{EHS und Kreisbewegung}
+Position:
+\[
+	r(t) = (x(t),y(t)) = A \cdot (\cos(\omega t), \sin(\omega t))
+\]
+\\
+Geschwindigkeit:
+\[
+	v = \frac{\di r}{\di t} = A \omega \cdot (-\sin(\omega t), \cos(\omega t))
+\]
+\\
+Beschleunigung:
+\[
+	a = \frac{v^2}{r} = A \cdot \omega^2
+\]
+
+
+\subsection{Energie der harmonischen Schwingung}
+Gesamte energie der EHS:
+\[\boxed{
+	\frac12 mv^2 + \frac12kx^2 = \frac12kA^2 = \frac12m\omega^2 A^2 = \frac12 m (v_{max})^2
+}\]
+
+
+\subsection{Torsion, Koordinate $\theta$}
+Das rücktreibende Drehmoment $M_A$ ist proportional zum Torsionswinkel $\theta$:
+\[
+	M_A = -\kappa \cdot \theta
+\]
+\\
+harmonische Torsionsschwingung:
+\[
+	M = I_A \cdot \ddot{\theta} + \kappa \cdot \theta
+\]
+\[
+	\theta(t) = \theta_{max} \cos(\omega t \pm \phi)
+\]
+\\
+Kreisfrequenz und Periode:
+\[\boxed{
+	\omega = \sqrt{\frac{\kappa}{I_A}} \qquad T = 2 \pi \sqrt{\frac{I_A}{\kappa}}
+}\]
+\\
+für kleine Winkel:
+\[
+	\kappa = k_1 \cdot {r_1}^2 + k_2 \cdot {r_2}^2 = \sum_{1}^{n}(k_n \cdot {r_n}^2)
+\]
+
+
+\subsection{Fadenpendel}
+
+Es gilt die Näherung: $\sin \theta \approx \theta$ (in rad)
+\[
+	m\ddot{x} = F_{tan} = -mg\sin\theta \approx -mg\theta = -mg\frac{x}{L} \rightarrow \ddot{x} + \frac{g}{L}x = 0
+\]
+\\
+Kreisfrequenz und Periodendauer:
+\[\boxed{
+	\omega = \sqrt{\frac{g}{L}} \qquad T = 2\pi \sqrt{\frac{L}{g}}
+}\]
+\\
+Fadenkraft:
+\[
+	F_s = mg\cdot \cos\theta + m\frac{v^2}{L} = mg\cdot \cos\theta + m\omega^2 L
+\]
+
+
+\subsection{Physikalisches Pendel}
+Anstelle von $F=ma$ wird $M=I\alpha$ verwendet:
+\[
+	I_z \ddot{\theta} = M_z = -d \cdot mg\sin\theta \approx -mgd\cdot \theta \rightarrow \ddot{\theta} + \frac{mgd}{I_z} \theta = 0
+\]
+\\
+Kreisfrequenz und Periodendauer:
+\[\boxed{
+	\omega = \sqrt{\frac{mgd}{I_z}} \qquad T = 2\pi \sqrt{\frac{I_z}{mgd}}
+}\]
+\\
+\begin{footnotesize}
+	$d$: Abstand der Drehachse zum \textbf{Schwerpunkt}\\
+	$I_z$: Trägheitsmoment bzgl. der Drehachse\\
+	$m$: Masse des Körpers
+\end{footnotesize}
+
+
+\section{Gedämpfte Schwingung}
+Reale Schwingungen sind gedämpft durch Reibung. Die Reibungskraft ist proportional zur Geschwindigkeit $v$.
+\[
+	\vec{F}_{Res} = ma \rightarrow \vec{F}_{Rück} + \vec{F}_{Dämpf} = -kx -bv = ma
+\]
+
+\[\boxed{
+	\ddot{x} + \frac{k}{m} x + \frac{b}{m} \dot{x} = 0
+}\]
+
+\[
+	F_{Dämpf} = 6\pi \cdot \eta \cdot R \cdot v \ \rightarrow \ b = 6\pi \cdot \eta \cdot R
+\]
+\\
+\\
+Radikant: $\delta^2 = \beta^2 - \omega^2$
+\\\\
+\textbf{1. Fall: $\delta^2 > 0$} $\rightarrow$ Kriechfall\\
+allgeimeine Lösung:
+\[
+	x(t) = \e^{-\beta t} \left( C_1 \e^{\delta t} + C_2 \e^{-\delta t} \right)
+\]
+\\\\
+\textbf{2. Fall: $\delta^2 = 0$} $\rightarrow$ kritische Dämpfung\\
+allgeimeine Lösung:
+\[
+	x(t) = \e^{-\beta t} \left( C_1 t + C_2 \right)
+\]
+\[
+	b_{krit} = \sqrt{4k\cdot m}
+\]
+\\\\
+\textbf{3. Fall: $\delta^2 < 0$} $\rightarrow$ gedämpfte Schwingung\\
+allgemeine Lösung:
+\[\boxed{
+	x(t)=A \cdot \e^{-\beta t} \cdot \cos(\omega_d \cdot t \pm \phi)
+}\]
+\\
+Kreisfrequenz:
+\[\boxed{
+	\omega_d = \sqrt{\omega^2 - \beta^2} = \sqrt{\frac{k}{m} - \left( \frac{b}{2m} \right)^2}
+}\]
+\[
+	\beta=\frac{b}{2m} \qquad \omega = \sqrt{\frac{k}{m}}
+\]
+\[
+	\beta^2 < \omega^2 \ \Rightarrow \ b^2 < 4k \cdot m
+\]
+
+\subsection{Abklingkonstante $\beta$}
+Die Amplitude zerfällt exponentiell:
+\[\boxed{
+	A(t) = A \e^{-\beta t} = A \e^{-\frac{t}{\tau}}
+}\]
+\[
+	\beta = \frac{1}{\tau} \qquad\qquad \beta = \frac{\ln \left( \frac{x(t_1)}{x(t_2)} \right)}{t_2-t_1}
+\]
+
+
+\subsection{Torsionsschwingung mit Dämpfung}
+Differenzialgleichung:
+\[
+	-\kappa\theta-B\dot{\theta} = I_A \ddot{\theta}
+\]
+\[
+	\theta(t) = \theta_0 \cdot \e^{-\beta t} \cdot \cos(\omega_d t \pm \phi)
+\]
+\\
+Daraus folgt:
+\[
+	\beta = \frac{B}{2I_A} \qquad \omega = \sqrt{\frac{\kappa}{I_A}} \qquad \omega_d = \sqrt{\frac{\kappa}{I_A} - \frac{B^2}{4{I_A}^2}}
+\]
+\\
+\begin{footnotesize}
+	$I_{A}$: Trägheitsmoment\\
+	$\kappa$: Hookesche Prportionalitätskonstante \\
+	$B$: viskose Dämpfungskonstante
+\end{footnotesize}
+
+
+\subsection{Physikalisches Pendel mit Dämpfung}
+Differenzialgleichung:
+\[
+	-mgd\cdot\theta-b^*\dot{\theta} = I_z \ddot{\theta}
+\]
+\[
+	\theta(t) = \theta_0 \cdot \e^{-\beta t} \cdot \cos(\omega_d t \pm \phi)
+\]
+\\
+Daraus folgt:
+\[
+	\beta = \frac{b}{2I_z} \qquad \omega = \sqrt{\frac{mgd}{I_A}} \qquad \omega_d = \sqrt{\frac{mgd}{I_A} - \frac{b^2}{4{I_z}^2}}
+\]
+\\
+\begin{footnotesize}
+	$I_{zA}$: Trägheitsmoment\\
+	$b^*$: viskose Dämpfung
+\end{footnotesize}
+
+
+\subsection{Elektrischer Schwingkreis}
+Differenzialgleichung:
+\[
+	L\ddot{q} + R\dot{q} + \frac{q}{C} = 0
+\]
+\\
+Daraus folgt:
+\[
+	\beta = \frac{R}{2L} \qquad \omega = \sqrt{\frac{1}{L \cdot C}} \qquad \omega_d = \sqrt{\frac{1}{L \cdot C} - \frac{R^2}{4{L}^2}}
+\]
+\\
+\[\begin{aligned}
+	Q&=\sqrt{\frac{L}{R^2 \cdot C}} \\
+	q(t) &= \hat{q}\cdot \e^{-\beta t}\cdot \cos(\omega_d \cdot t + \phi) \\
+	u(t) &= \frac{\hat{q}}{C} \cdot \e^{-\beta t}\cdot \cos(\omega_d \cdot t + \phi) \\
+	i(t) &= \hat{q} \cdot \e^{-\beta t}\left(-\beta \cdot \cos(\omega_d \cdot t + \phi) - \omega_d \cdot \sin(\omega_d \cdot t + \phi) \right)
+\end{aligned}\]
+\\
+\begin{footnotesize}
+	$i=\difrac{q}{t}$: El. Strom\\
+	$u_c = \frac{q}{C}$: Kondensatorspannung\\
+	$u_L = L\difrac{i}{t}$: Spulenspannung\\
+	$u_R = R \cdot i$: Spannung am Widerstand
+\end{footnotesize}
+
+
+
+\subsection{Energieverlust durch Dämpfung}
+Energie am schwingenden System:
+\[
+	E(t) = \frac12 kx^2 + \frac12 mv^2
+\]
+\\
+Momentante Energieänderungsrate:
+\[
+	\difrac{E}{t} = kx \difrac{x}{t}+ mv \difrac{v}{t} = \dot{x}(kx + m\ddot{x}) = \dot{x}\cdot F_D = -bv^2
+\]
+\\
+Mittlere Energie des schwingenden Systems:
+\[\boxed{
+	\left\langle E(t) \right\rangle = \frac12 kA^2 \cdot \e^{-2\frac{t}{\tau}} = E_0 \cdot \e^{-2\frac{t}{\tau}} = E_0 \cdot \e^{-2\beta t} 
+}\]
+
+
+\subsection{Güte, $Q$-Faktor bei kleiner Dämpfung}
+Der Energieverlust pro Zyklus wird mit der Güte ausgedrückt. Definition:
+\[\boxed{
+	Q = \frac{2\pi \cdot E(t)}{\left| \Delta E(t)_T \right|}
+	  = \frac{2\pi \cdot E(t)}{\left| \difrac{E}{t} \cdot T_d \right|}
+	  = \frac{\omega_d \cdot E(t)}{\left| \difrac{E}{t} \right|}
+	  = \frac{\pi}{\beta \cdot T_d}
+	  = \frac{\omega_d \cdot \tau}{2}
+}\]
+\\
+\begin{footnotesize}
+	Je kleiner die Dämpfung $\beta$, bzw. $b$ und je grösser die Kreisfrequenz $\omega_d \approx \omega$, desto grösser die Güte $Q$.
+\end{footnotesize}
+\\
+Für grosse $Q$ ($Q>5$):
+\[\boxed{
+	\omega_d \approx \frac{\omega}{\sqrt{1 + \frac{1}{4Q^2}}} \approx \omega \left( 1 - \frac{1}{8Q^2} \right)
+}\]
+
+
+\section{Erzwungene Schwingung}
+Differenzialgleichung:
+\[
+	\ddot{x} + 2\beta \dot{x} + \omega^2x = \omega^2 H \cos(\Omega \cdot t) = \frac{F_0}{m} \cos(\Omega \cdot t)
+\]
+Die Amplitude $A$ und die Phase $\phi$ sind nun Funktion der Anreger-Kreisfrequenz $\Omega$:
+\[\boxed{\begin{aligned}
+	A(\Omega) &= \frac{F_0}{m \cdot \sqrt{\left(\omega^2 -        \Omega^2\right)^2 + \left(2\beta \cdot \Omega\right)^2}}
+	          = \frac{H}{\sqrt{\left(1- \left(\frac{\Omega}{\omega}\right)^2\right)^2+\frac{b^2}{k\cdot m} \left( \frac{\Omega}{\omega} \right)^2}}\\
+	&\approx \frac{H}{\sqrt{\left(1- \left(\frac{\Omega}{\omega}\right)^2\right)^2+\left( \frac{\Omega}{Q\cdot\omega} \right)^2}}
+\end{aligned}}\]
+\begin{footnotesize}
+	$\approx$ gilt für $Q>5$
+\end{footnotesize}
+
+\[\boxed{
+	\phi(\Omega) = \arctan \left( \frac{2\beta \cdot \Omega}{\omega^2 - \Omega^2} \right)
+		= \arctan \left( \frac{\frac{b}{\sqrt{k \cdot m}} \left( \frac{\Omega}{\omega} \right)}{1 - \left(\frac{\Omega}{\omega}\right)^2 } \right)
+}\]
+\\
+Weiterhin gilt:
+\[
+	\omega = \sqrt{\frac{k}{m}} \qquad
+	\beta = \frac{b}{2m} = \frac{1}{\tau} \qquad
+	Q = \frac{\omega_d}{2\beta} = \pi \frac{\tau}{T}
+\]
+Allerdings ist jetzt:
+\[\boxed{
+	x(t) = A(\omega) \cdot \cos(\Omega \cdot t - \phi(\omega))
+}\]
+\\
+\begin{footnotesize}
+	$F_0$: Anregerkraft ($=k \cdot H$)\\
+	$\Omega$: Anreger-Kreisfrequenz\\
+	$H$: Anreger-Auslenkung
+\end{footnotesize}
+
+
+
+\subsection{Frequenzgang}
+Kurvendiskussion von $A(\Omega)$ und $\phi(\Omega)$:
+\[\begin{matrix}
+	\Omega := 0: & A(\Omega) = H & \phi(\Omega) = 0 \\ 
+	\Omega := \infty: & A(\Omega) = 0 & \phi(\Omega) = \pi \\ 
+	\Omega := \omega: & A(\Omega) = \frac{k \cdot H}{b \cdot \omega} & \phi(\Omega) = \frac{\pi}{2}
+\end{matrix} \]
+
+
+\subsection{Resonanz}
+Resonanz bedeutet maximale Amplitude.
+\[\boxed{\begin{aligned}
+	\Omega_R &= \sqrt{\omega^2 - \frac{b^2}{2m^2}}
+	         = \sqrt{\omega^2 - 2\beta^2}
+	         \approx \omega \cdot \sqrt{1 - \frac{1}{2Q^2}}\\
+	         &\approx \omega \cdot \left( 1 - \frac{1}{4Q^2} \right)
+\end{aligned}}\]
+\[\boxed{
+	A_R = A(\Omega_R) \approx \frac{Q \cdot H}{\sqrt{1 - \frac{1}{2Q^2}}} \approx Q \cdot H
+}\]
+\[\boxed{
+	\phi_R = \phi(\Omega_R) \approx \arctan \left( \sqrt{4Q^2 - 2} \right) \approx \frac{\pi}{2}
+}\]
+\begin{footnotesize}
+	$\approx$ gilt für $Q>5$
+\end{footnotesize}
+
+\subsubsection{$Q$-Faktor und Resonanzkurve}
+Die Güte ist ein Mass für die Peak-Schärfe. Für grosse $Q$ (=kleine Dämpfung) gilt:
+\[\boxed{
+	Q = \frac{\Omega_R}{\Delta \Omega}
+}\]
+\begin{footnotesize}
+	$\Delta \Omega$: Kurfenbreite auf der Höhe $\frac{A_R}{\sqrt2}$
+\end{footnotesize}
