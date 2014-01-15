@@ -28,17 +28,14 @@ Die Lösung aus dieser homogenen Differenzialgleichung:
 \[\boxed{
 	x(t) = A \cos(\omega t \pm \phi)
 }\]
-
 \[\boxed{
 	\omega = 2 \pi f = \sqrt{\frac{k}{m}}
 }\]
-
 \[\boxed{
 	T = 2 \pi \sqrt{\frac{m}{k}}
 }\]
 \\
 \begin{footnotesize}
-	Die Amplitude $A$ und der Phasenwinkel $\phi$ sind durch die Anfangsbedingungen gegeben.\\
 	Eine positive Phase $\phi$ bedeutet eine Verschiebung nach links, ein negatives $\phi$ eine nach rechts!
 \end{footnotesize}
 \\
@@ -216,7 +213,7 @@ Kreisfrequenz:
 	\beta^2 < \omega^2 \ \Rightarrow \ b^2 < 4k \cdot m
 \]
 
-\subsection{Abklingkonstante $\beta$}
+\subsection{Abklingkonstante $\beta$, Zerfallszeit $\tau$}
 Die Amplitude zerfällt exponentiell:
 \[\boxed{
 	A(t) = A \e^{-\beta t} = A \e^{-\frac{t}{\tau}}
@@ -315,16 +312,20 @@ Mittlere Energie des schwingenden Systems:
 Der Energieverlust pro Zyklus wird mit der Güte ausgedrückt. Definition:
 \[\boxed{
 	Q = \frac{2\pi \cdot E(t)}{\left| \Delta E(t)_T \right|}
-	  = \frac{2\pi \cdot E(t)}{\left| \difrac{E}{t} \cdot T_d \right|}
+	  = \frac{2\pi \cdot E(t)}{\left| \difrac{E}{t} \cdot T \right|}
 	  = \frac{\omega_d \cdot E(t)}{\left| \difrac{E}{t} \right|}
-	  = \frac{\pi}{\beta \cdot T_d}
+	  = \frac{\pi}{\beta \cdot T}
+	  = \pi\frac{\tau}{T}
 	  = \frac{\omega_d \cdot \tau}{2}
 }\]
-\\
+\begin{footnotesize}
+	$\Delta E(t)_T$: Energieverlust pro Zyklus
+\end{footnotesize}
+\\\\
 \begin{footnotesize}
 	Je kleiner die Dämpfung $\beta$, bzw. $b$ und je grösser die Kreisfrequenz $\omega_d \approx \omega$, desto grösser die Güte $Q$.
 \end{footnotesize}
-\\
+\\\\
 Für grosse $Q$ ($Q>5$):
 \[\boxed{
 	\omega_d \approx \frac{\omega}{\sqrt{1 + \frac{1}{4Q^2}}} \approx \omega \left( 1 - \frac{1}{8Q^2} \right)
@@ -345,6 +346,13 @@ Die Amplitude $A$ und die Phase $\phi$ sind nun Funktion der Anreger-Kreisfreque
 \begin{footnotesize}
 	$\approx$ gilt für $Q>5$
 \end{footnotesize}
+\\
+\begin{footnotesize}
+	$F_0$: Anregerkraft ($=k \cdot H$)\\
+	$\Omega$: Anreger-Kreisfrequenz\\
+	$H$: Anreger-Auslenkung
+\end{footnotesize}
+
 
 \[\boxed{
 	\phi(\Omega) = \arctan \left( \frac{2\beta \cdot \Omega}{\omega^2 - \Omega^2} \right)
@@ -361,12 +369,6 @@ Allerdings ist jetzt:
 \[\boxed{
 	x(t) = A(\omega) \cdot \cos(\Omega \cdot t - \phi(\omega))
 }\]
-\\
-\begin{footnotesize}
-	$F_0$: Anregerkraft ($=k \cdot H$)\\
-	$\Omega$: Anreger-Kreisfrequenz\\
-	$H$: Anreger-Auslenkung
-\end{footnotesize}
 
 
 
